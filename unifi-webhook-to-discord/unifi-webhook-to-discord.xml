@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Unifi to Discord webhook</Name>
+  <Repository>redzguilt/unifi-webhook-to-discord:latest</Repository>
+  <Registry>https://hub.docker.com/r/redzguilt/unifi-webhook-to-discord</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/JZomDev/UnifiWebhookToDiscord/issues</Support>
+  <Project>https://github.com/JZomDev/UnifiWebhookToDiscord</Project>
+  <ReadMe>https://github.com/JZomDev/UnifiWebhookToDiscord?tab=readme-ov-file#unifi-to-discord-webhook</ReadMe>
+  <TemplateURL>https://raw.githubusercontent.com/JZomDev/unraid-templates/refs/heads/main/unifi-webhook-to-discord/unifi-webhook-to-discord.xml</TemplateURL>
+  <Overview>This is a tiny webhook listener that listens for Unifi's webhooks sent to the docker container's IP:PORT and formats the message to a Discord webhook.&#xD;
+&#xD;
+You can add devices by using a device's mac address as a variable and the device name as the variable name, visit the project's repo for a read me.</Overview>
+  <Category>HomeAutomation:Security: Tools:</Category>
+  <Icon>https://pbs.twimg.com/profile_images/1610157462321254402/tMCv8T-y_400x400.png</Icon>
+  <Config Name="webhook" Target="webhook" Default="https://discord.com/api/webhooks/1234567890/abcdefghijklmno" Mode="" Description="Webhook URL for the discord channel alerts go to" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Alerter 1" Target="MA:CA:DD:RR:EE:S1" Default="MA:CA:DD:RR:EE:S1" Mode="" Description="MAC_ADDRESS &amp;lt;-&amp;gt; NAME OF DEVICE MAPPING" Type="Variable" Display="always" Required="false" Mask="false">Camera on Shed</Config>
+  <Config Name="Alerter 2" Target="MA:CA:DD:RR:EE:S2" Default="MA:CA:DD:RR:EE:S2" Mode="" Description="MAC_ADDRESS &amp;lt;-&amp;gt; NAME OF DEVICE MAPPING" Type="Variable" Display="always" Required="false" Mask="false">Name for device</Config>
+  <Config Name="port" Target="8080" Default="" Mode="tcp" Description="Port Unifi sends messages to" Type="Port" Display="always" Required="false" Mask="false">7019</Config>
+  <Config Name="UUID_1" Target="UUID_1" Default="" Mode="" Description="Console UUID for remote viewing" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="UUID_2" Target="UUID_2" Default="" Mode="" Description="Console UUID (other value) for remote viewing" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="appdata" Target="/var/" Default="" Mode="rw" Description="Logs stored here" Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/UnifiWebhookToDiscord</Config>
+  <Beta>False</Beta>
+  <ExtraSearchTerms>discord webhook unifi protect unifiprotect discordwebhook</ExtraSearchTerms>
+</Container>
