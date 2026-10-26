@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>PlexInformationBot</Name>
+  <Name>Plex Information Bot</Name>
   <Repository>redzguilt/plexinfobot:latest</Repository>
   <Registry>https://hub.docker.com/r/redzguilt/plexinfobot</Registry>
   <Network>bridge</Network>
