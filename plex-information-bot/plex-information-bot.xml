@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>PlexInformationBot</Name>
-  <Repository>redzguilt/plexinfobot</Repository>
+  <Repository>redzguilt/plexinfobot:latest</Repository>
   <Registry>https://hub.docker.com/r/redzguilt/plexinfobot</Registry>
   <Network>bridge</Network>
-  <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/JZomDev/PlexInformationBot/issues</Support>
   <Project>https://github.com/JZomDev/PlexInformationBot</Project>
+  <ReadMe>https://github.com/JZomDev/PlexInformationBot?tab=readme-ov-file#plexinformationbot</ReadMe>
   <Overview>A Discord bot that shows what your Plex server is doing: viewers in the bot status, a live streams message, an optional Radarr/Sonarr download queue and a role message. Configure everything on the built-in setup page (first sign-in: admin / admin).</Overview>
   <Category>MediaServer: Tools:</Category>
   <WebUI>http://[IP]:[PORT:45461]/</WebUI>
@@ -17,4 +17,6 @@
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/plexinfobot" Mode="rw" Description="Settings and login are stored here." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/plexinfobot</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID the bot runs as (99 = nobody)." Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID the bot runs as (100 = users)." Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Beta>False</Beta>
+  <ExtraSearchTerms>discord plex bot invite automation information radarr sonarr</ExtraSearchTerms>
 </Container>
