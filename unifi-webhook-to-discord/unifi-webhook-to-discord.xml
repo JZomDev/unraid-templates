@@ -11,12 +11,13 @@
   <TemplateURL>https://raw.githubusercontent.com/JZomDev/unraid-templates/refs/heads/main/unifi-webhook-to-discord/unifi-webhook-to-discord.xml</TemplateURL>
   <Overview>This is a tiny webhook listener that listens for Unifi's webhooks sent to the docker container's IP:PORT and formats the message to a Discord webhook.&#xD;
 &#xD;
-You can add devices by using a device's mac address as a variable and the device name as the variable name, visit the project's repo for a read me.</Overview>
+Open the WebUI (first login admin / admin) to set the Discord webhook and add your cameras by MAC address and name. Visit the project's repo for a read me.</Overview>
   <Category>HomeAutomation: Security: Tools:</Category>
   <Icon>https://pbs.twimg.com/profile_images/1610157462321254402/tMCv8T-y_400x400.png</Icon>
   <WebUI>http://[IP]:[PORT:45462]/</WebUI>
   <Config Name="WEB_PORT" Target="45462" Default="45462" Mode="tcp" Description="Port for the setup page. Change this to reach the page on a different port; the WebUI link follows it." Type="Port" Display="always" Required="true" Mask="false">45461</Config>
-  <Config Name="appdata" Target="/config" Default="" Mode="rw" Description="Logs stored here" Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/UnifiWebhookToDiscord</Config>
+  <Config Name="WEBHOOK_PORT" Target="8080" Default="7019" Mode="tcp" Description="Port Unifi sends its alarm webhooks to. Set the Unifi delivery URL to http://[IP]:[this port]/data" Type="Port" Display="always" Required="true" Mask="false">7019</Config>
+  <Config Name="appdata" Target="/config" Default="" Mode="rw" Description="Settings (settings.json: cameras, webhook, password) and logs are stored here. Keep this mapped or settings are lost when the container is updated." Type="Path" Display="advanced-hide" Required="false" Mask="false">/mnt/user/appdata/UnifiWebhookToDiscord</Config>
   <Beta>False</Beta>
   <ExtraSearchTerms>discord webhook unifi protect unifiprotect discordwebhook</ExtraSearchTerms>
 </Container>
