@@ -8,6 +8,7 @@
   <Support>https://github.com/JZomDev/PlexInformationBot/issues</Support>
   <Project>https://github.com/JZomDev/PlexInformationBot</Project>
   <ReadMe>https://github.com/JZomDev/PlexInformationBot?tab=readme-ov-file#plexinformationbot</ReadMe>
+  <TemplateURL>https://raw.githubusercontent.com/JZomDev/unraid-templates/refs/heads/main/plex-information-bot/plex-information-bot.xml</TemplateURL>
   <Overview>A Discord bot that shows what your Plex server is doing: viewers in the bot status, a live streams message, an optional Radarr/Sonarr download queue and a role message. Configure everything on the built-in setup page (first sign-in: admin / admin).</Overview>
   <Category>MediaServer: Tools:</Category>
   <WebUI>http://[IP]:[PORT:45461]/</WebUI>
